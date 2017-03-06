@@ -1,0 +1,44 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+When initialize a git repository with the command "git init" then empty repository with 
+no commits is created in that folder which is the current working directory of the git-bash-shell
+in which I issued that command.
+
+Files present in that directory are treated as "Untracked files". 
+This we can observe by issuing the command "git status".
+
+How is the staging area different from the working directory and the repository? 
+What value do you think it offers?
+
+The staging area differs from the working directory in at least two ways.
+1. It contains files which are prepared of being commited to the repository.
+   We need to add first the files to the staging area before we may commit them into the repository
+
+2. In the staging area we can bundle by subsequental add-commands the files we want to treat in one commit.
+ 
+3. Files which are already in the staging area are already saved in way so we can restore them if the
+   files were accedently lost in the working directory 
+
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+I may subsequently collecta group of files each representing a logical unit of work which I can then commit
+in one "bundle" commit representing the logical unit of work.
+
+
+What are some situations when branches would be helpful in keeping 
+your history organized? How would branches help? 
+
+If we release regular production versions for the customer for which
+we need to support bugfixing and keeping the possibility merging back
+changes/from the fixes) into the main development(master)
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Pros: a) If changes in different files between branches happened, i.e. if there is no change in the same file on both branches, 
+      then an automatic merge helps to increase the process of merging.
+      b) Further more a automatic merge helps you to be aware of all changes in all files, so it helps not 
+         forgetting the one or the other file/change.
+         
+Cons: a) The biggest problem is that a merge can create a merged version of a source file without claiming 
+         that there is a conflicct but having a result which doesn#t buil!!
+      c) 
